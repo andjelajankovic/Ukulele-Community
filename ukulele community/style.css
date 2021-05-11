@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Fondamento%7CNunito:300,400&display=swap');
+:root {
+    --crna: #292f36;    /* rgb(41, 47, 54) */
+    --zelena: #4ecdc4;  /* rgb(78, 205, 196) */
+    --bela: #fff;
+    --crvena: #ff6b6b;  /* rgb(255, 107, 107) */
+    --svetlosiva: #ede8e8;
+    --transition: .3s ease;
+    --padding: 80px 0;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fondamento', cursive;
+}
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+[class*="col-"] {
+  float: left;
+padding: 30px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+}
+button {
+   /* padding: 15px 30px; */
+   /* font-size: 1rem;*/
+  /*  border-radius: 30px;*/
+    background: transparent;
+    border: 2px solid var(--crvena);
+    color: var(--crvena);
+    text-transform: uppercase;
+}
+button{
+    width: 120px;
+    height: 50px;
+    padding: 15px 30x;
+    font-size: 1rem;
+    border-radius: 30px;
+    background: transparent;
+    border: 2px solid var(--crvena);
+    color: var(--crvena);
+    text-transform: uppercase;
+}
+button:hover {
+    background: var(--crvena);
+    border: 2px solid var(--crvena);
+    color: var(--bela);
+    cursor: pointer;
+    transition: var(--transition);
+}
+header {
+    background-image: url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 200px 100px;
+    text-align: center;
+}
+h1{
+    font-size: 4rem;
+    color: var(--crna);
+}
+header p {
+    font-size: 1.3rem;
+    color: var(--crna);
+    opacity: .6;
+    padding: 20px 0 40px 0;
+}
+/*********************
+about
+*********************/
+.about {
+    padding: var(--padding);
+    background: var(--svetlosiva);
+}
+.about .row {
+    box-shadow: 0 0 20px gray;
+}
+.about .imgLeft {
+    margin-bottom: 60px;
+}
+.about .imgLeft .col-6:nth-child(1) {
+    background-image: url(img/community.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+.about .imgRight .col-6:nth-child(2) {
+    background-image: url(img/shop.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+.about h3 {
+    font-size: 2rem;
+}
+.about .imgLeft .col-6:nth-child(2),
+.about .imgRight .col-6:nth-child(1){
+    padding: 70px;
+    background: var(--bela);
+    height: 400px;
+}
+.about p {
+    font-size: 1.1rem;
+    padding: 20px 0;
+}
+}
+/*********************
+gallery
+*********************/
+.gallery {
+    padding: var(--padding);
+}
+.gallery img {
+    width: 100%;
+    box-shadow: 0 0 20px gray;
+}
+.gallery .col-3 {
+    padding: 20px;
+}
+.gallery h2 {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--crvena);
+    padding-bottom: 30px;
+}
+.gallery button {
+    margin: auto;
+    display: block;
+}
+.community{
+    text-align: center;
+    background-image: url(img/community-section.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 200px 100px;
+    color: var(--bela);
+    background-attachment: fixed;
+}
+.community h2{
+    font-size: 1.3rem;
+    opacity: .7;
+}
+.community p {
+    font-size: 1.3rem;
+    opacity: .7;
+    padding: 20px 0;
+}
+footer {
+    text-align: center;
+    background: var(--crvena);
+    padding: var(--padding);
+}
+.form {
+    width: 50%;
+    margin: auto;
+    text-align: left;
+}
+footer h2{
+    color: var(--crna);
+    font-size: 3rem;
+}
+footer label,
+footer input,
+footer textarea{
+    display: block;
+    width: 100%;
+    color: var(--crna);
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+}
+footer input,
+footer textarea{
+    background: rgba(255, 255, 255, .2);
+}
+footer button{
+    border: 2px solid var(--bela);
+    color: var(--bela);
+    display: block;
+    margin: 30px auto;
+}
+footer a {
+    background: var(--bela);
+    color: var(--crvena);
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 0 15px;
+}
+@media(max-width: 768px){
+    [class="col-"]{
+        width: 100%;
+    }
+    .container {
+        width: 90%;
+    }
+    header {
+        padding: 50px;
+    }
+    h1 {
+        font-size: 2.5rem;
+        line-height: 50px;
+    }
+    .about .imgLeft .col-6:nth-child(2) .about imgRight .col-6:nth-child(1){
+        padding: 30px;
+    }
+    .community{
+        padding: 50px;
+    }
+    .community h2 {
+        font-size: 2rem;
+        line-height: 40px;
+    }
+    form {
+        width: 90%;
+    }
+    .about p {
+        font-size: .5rem;
+    }
+    .about button{
+height: 30px;
+    width: 60px;
+    font-size: 0.7rem;}
+}
